@@ -298,13 +298,17 @@ body {
   height: 40px;
 }
 
-
 .parrafoIndex {
+  display        : flex;
+  justify-content: center;
   color          : $color_azul;
   font-size      : 20px;
   font-weight    : bold;
-  text-align     : left;
-margin: 20px;
+  text-align     : center;
+  padding-right  : 300px;
+  padding-left   : 300px;
+  margin-top     : 50px;
+  margin-bottom  : 50px;
 }
 
 .imagenesIndex:hover {
