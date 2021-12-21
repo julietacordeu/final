@@ -1,13 +1,13 @@
-@import "variables";
+@import 'variables';
 
 * {
-  margin : 0;
+  margin: 0;
   padding: 0;
 }
 
 body {
   font-family: 'Montserrat', sans-serif;
-  font-size  : 62, 5%;
+  font-size: 62,5%;
 }
 
 @media screen and (max-width: 768px) {
@@ -17,34 +17,28 @@ body {
 }
 
 /*--------------------------------------------------------------
-  # Header
-  --------------------------------------------------------------*/
+# Header
+--------------------------------------------------------------*/
 
 #header {
   transition: all 0.5s;
-  z-index   : 997;
-  padding   : 15px 0;
+  z-index: 997;
+  padding: 15px 0;
+ background-color: $color_naranja;
 
-  &.header-scrolled,
-  &.header-inner-pages {
-    background: $color_naranja
-  }
 
   .logo {
-    font-size     : 32px;
-    margin        : 0;
-    padding       : 0;
-    line-height   : 1;
-    font-weight   : 700;
+    font-size: 32px;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-weight: 700;
     letter-spacing: 2px;
     text-transform: uppercase;
 
     a {
       color: #fff;
 
-      span {
-        color: $color_naranja;
-      }
     }
 
     img {
@@ -53,21 +47,16 @@ body {
   }
 }
 
-/*--------------------------------------------------------------
-  # Navigation Menu
-  --------------------------------------------------------------*/
-/**
-  * Desktop Navigation 
-  */
+/* MENU/navbar */
 
 .navbar {
   padding: 0;
 
   ul {
-    margin     : 0;
-    padding    : 0;
-    display    : flex;
-    list-style : none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
     align-items: center;
   }
 
@@ -76,64 +65,40 @@ body {
   }
 
   a {
-    display        : flex;
-    align-items    : center;
+    display: flex;
+    align-items: center;
     justify-content: space-between;
-    padding        : 10px 0 10px 30px;
-    font-size      : 15px;
-    font-weight    : 600;
-    color          : #fff;
-    white-space    : nowrap;
-    transition     : 0.3s;
-
-    &:focus {
-      display        : flex;
-      align-items    : center;
-      justify-content: space-between;
-      padding        : 10px 0 10px 30px;
-      font-size      : 15px;
-      font-weight    : 600;
-      color          : #fff;
-      white-space    : nowrap;
-      transition     : 0.3s;
-    }
-
-    i,
-    &:focus i {
-      font-size  : 12px;
-      line-height: 0;
-      margin-left: 5px;
-    }
+    padding: 10px 0 10px 30px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    white-space: nowrap;
+    transition: 0.3s;
 
     &:hover {
-      color: rgb(155, 175, 197);
+      color: $color_azul_gris;
     }
   }
 
   .active {
-    color: rgb(155, 175, 197);
+    color: $color_azul_gris;
 
-    &:focus {
-      color: rgb(155, 175, 197);
-    }
   }
 
-  li:hover>a {
-    color: rgb(155, 175, 197);
+  li:hover > a {
+    color: $color_azul_gris;
   }
 }
 
-/**
-  * Mobile Navigation 
-  */
+/* MOBILE NAVBAR */
 
 .mobile-nav-toggle {
-  color      : #fff;
-  font-size  : 28px;
-  cursor     : pointer;
-  display    : none;
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
   line-height: 0;
-  transition : 0.5s;
+  transition: 0.5s;
 }
 
 @media (max-width: 991px) {
@@ -147,150 +112,179 @@ body {
 }
 
 .navbar-mobile {
-  position  : fixed;
-  overflow  : hidden;
-  top       : 0;
-  right     : 0;
-  left      : 0;
-  bottom    : 0;
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
   background: rgba(0, 0, 0, 0.9);
   transition: 0.3s;
-  z-index   : 999;
+  z-index: 999;
 
   .mobile-nav-toggle {
     position: absolute;
-    top     : 15px;
-    right   : 15px;
+    top: 15px;
+    right: 15px;
   }
 
   ul {
-    display         : block;
-    position        : absolute;
-    top             : 55px;
-    right           : 15px;
-    bottom          : 15px;
-    left            : 15px;
-    padding         : 10px 0;
+    display: block;
+    position: absolute;
+    top: 55px;
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
+    padding: 10px 0;
     background-color: #fff;
-    overflow-y      : auto;
-    transition      : 0.3s;
+    overflow-y: auto;
+    transition: 0.3s;
   }
 
   a {
-    padding  : 10px 20px;
+    padding: 10px 20px;
     font-size: 15px;
-    color    : #151515;
+    color: #151515;
 
     &:focus {
-      padding  : 10px 20px;
+      padding: 10px 20px;
       font-size: 15px;
-      color    : #151515;
+      color: #151515;
     }
 
     &:hover {
-      color           : #151515;
+      color: #151515;
       background-color: $color_naranja;
     }
   }
 
-  .active,
-  li:hover>a {
-    color           : #151515;
+  .active, li:hover > a {
+    color: #151515;
     background-color: $color_naranja;
   }
 }
 
-/*--------------------------------------------------------------
-  # Hero Section
-  --------------------------------------------------------------*/
+/*   
+SECCIÓN PRINCIPAL */
 
-#hero {
-  width          : 100%;
-  height         : 100vh;
-  background     : url("../img/imagenindex.jpg") top center;
+#principal {
+  width: 100%;
+  height: 100vh;
+  background: url("../img/indexPortada.jpg") top center;
   background-size: cover;
-  position       : relative;
+  position: relative;
 
-  &:before {
-    content   : "";
-    background: rgba(32, 32, 48, 0.6);
-    filter    : opacity(20%);
-    position  : absolute;
-    bottom    : 0;
-    top       : 0;
-    left      : 0;
-    right     : 0;
-  }
 
   .container {
-    position   : relative;
-    padding-top: 74px;
-    text-align : center;
-  }
-
-  h1 {
-    margin     : 0;
-    font-size  : 56px;
-    font-weight: 700;
-    line-height: 64px;
-    color      : #fff;
-  }
-
-  h2 {
-    color    : rgba(255, 255, 255, 0.9);
-    margin   : 10px 0 0 0;
-    font-size: 24px;
-  }
-
-  .icon-box {
-    transition: ease-in-out 0.3s;
-    border    : none;
-    height    : 100%;
+    position: relative;
+    padding-top: 190px;
     text-align: center;
   }
 
-  .servicios {
-    width: 100%;
-  }
-
-  .icon-box h3 {
+  h1 {
+    margin: 0;
+    padding-top: 30px;
+    font-size: 56px;
     font-weight: 700;
-    margin     : 10px 0 0 0;
-    padding    : 0;
-    line-height: 1;
-    font-size  : 20px;
-    line-height: 26px;
-    color      : white;
+    line-height: 64px;
+    color: #fff;
   }
-}
 
-#iconos {
-  display: none;
+  h2 {
+    color: rgba(255, 255, 255, 0.9);
+    margin: 10px 0 0 0;
+    font-size: 24px;
+  }
+
+  .itemBox {
+    transition: ease-in-out 0.3s;
+    border: none;
+    height: 100%;
+    text-align: center;
+    margin-top: 4rem !important;
+  }
+
+  .itemBox h3 {
+    font-weight: 700;
+    margin: 10px 0 0 0;
+    padding: 0;
+    line-height: 1;
+    font-size: 20px;
+    line-height: 26px;
+    color: white;
+  }
+
+  .box1 {
+    background-color: $color_azul_gris;
+    width: 207px;
+    height: 180px;
+    text-align: center;
+    margin: 5px;
+    padding: 60px 10px 0px 10px;
+  } 
+  
+  .box2 {
+    background-color: $color_aguamarina;
+    width: 207px;
+    height: 180px;
+    text-align: center;
+    margin: 5px;
+    padding: 60px 10px 0px 10px;
+  }
+
+  .box3 {
+    background-color: $color_verdeClaro;
+    width: 207px;
+    height: 180px;
+    text-align: center;
+    margin: 5px;
+    padding: 60px 10px 0px 10px;
+  }
+
+  .box4 {
+    background-color: $color_naranjaClaro;
+    width: 207px;
+    height: 180px;
+    text-align: center;
+    margin: 5px;
+    padding: 60px 10px 0px 10px;
+  }
+
+  .box5 {
+    background-color: $color_naranja;
+    width: 207px;
+    height: 180px;
+    text-align: center;
+    margin: 5px;
+    padding: 60px 15px 0px 15px;
+  }
+
 }
 
 .flexImagenesIndex {
-  display        : flex;
-  flex-direction : row;
-  align-items    : center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   justify-content: space-evenly;
-  height         : 250px;
-  margin         : 30px;
+  height: 120px;
+  margin: 30px;
 }
 
 .flexIndex {
-  display        : flex;
-  flex-direction : row;
-  align-items    : center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   justify-content: center;
-  margin         : 5px;
-  padding        : 20px;
+  margin: 5px;
+  margin-top: 60px;
+  padding: 20px;
 }
 
 .textoIcono {
-  font-size  : 22px;
-  color      : $color_azul;
-  text-align : center;
-  margin     : 30px;
+  font-size: 22px;
+  color: #0b132b;
+  text-align: center;
+  margin: 30px;
   font-weight: bold;
 }
 
@@ -298,172 +292,131 @@ body {
   height: 40px;
 }
 
-.parrafoIndex {
-  display        : flex;
-  justify-content: center;
-  color          : $color_azul;
-  font-size      : 20px;
-  font-weight    : bold;
-  text-align     : center;
-  padding-right  : 300px;
-  padding-left   : 300px;
-  margin-top     : 50px;
-  margin-bottom  : 50px;
-}
 
-.imagenesIndex:hover {
-  filter: opacity(50%);
+.imagenesIndex {
+  filter: saturate(0%);
 }
 
 .flexVideo {
-  display        : flex;
-  flex-direction : row;
+  display: flex;
+  flex-direction: row;
   justify-content: center;
-  position       : static;
+  position: static;
 }
 
 .video {
   align-content: center;
-  align-items  : center;
-  width        : 80%;
-  margin       : 30px;
+  align-items: center;
+  width: 80%;
+  margin: 30px;
+  margin-bottom: 78px;
+}
+.clientes {
+  background-color: $color_verdeClaro;
+  color: white;
+  padding: 20px;
+  margin: 0px;
 }
 
 /* ESTILOS QUIENES SOMOS */
 
-#quienes {
-  width          : 100%;
-  height         : 100vh;
-  background     : url("../img/fotoquienes2.jpg") top center;
-  background-size: cover;
-  position       : relative;
-
-  &:before {
-    content   : "";
-    background: rgba(32, 32, 48, 0.6);
-    filter    : opacity(20%);
-    position  : absolute;
-    bottom    : 0;
-    top       : 0;
-    left      : 0;
-    right     : 0;
-  }
-
-  .container {
-    position   : relative;
-    padding-top: 74px;
-    text-align : center;
-  }
-
-  h1 {
-    margin     : 0;
-    font-size  : 56px;
-    font-weight: 700;
-    line-height: 64px;
-    color      : #fff;
-  }
-}
-
 .gridsQuienesSomos {
-  display              : grid;
+  display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows   : auto auto auto;
-  grid-template-areas  : "tituloQuienesSomos tituloQuienesSomos""parrafoQuienesSomos fotoRapiditas";
-  justify-items        : center;
-  align-items          : center;
-  padding-bottom       : 90px;
+  grid-template-rows: auto auto;
+  grid-template-areas: "quienesTitulo fotoRapiditas" "parrafoQuienesSomos fotoRapiditas";
+  justify-items: center;
+  align-items: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
-.tituloQuienesSomos {
-  grid-area     : tituloQuienesSomos;
-  color         : $color_azul;
-  padding-bottom: 50px;
-  padding-top   : 30px;
+
+.quienesTitulo {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 64px;
+  color: $color_naranja;
+  margin: 10px 0px 0px 103px;
+  width: 400px;
 }
+
 
 .parrafoQuienesSomos {
-  grid-area  : parrafoQuienesSomos;
-  font-weight: 450;
-  font-size  : 16px;
-  line-height: 25px;
-  width      : 500px;
-  color      : $color_azul;
-  height     : 600px;
-}
-
-.tituloMaquinas {
-  text-align : center;
-  font-weight: bold;
-  font-size  : 17px;
-  margin     : 5px;
-  padding    : 15px;
-  padding-top: 25px;
-}
-
-.listaMaquinas {
-  list-style-type: none;
-  line-height    : 40px;
-  text-align     : center;
+  grid-area: parrafoQuienesSomos;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 30px;
+  width: 400px;
+  margin-left: 103px;
+  color: #0B132B;
 }
 
 .fotoRapiditas {
   grid-area: fotoRapiditas;
-  height   : 600px;
+  height: 600px;
+}
+
+.lonaGigante {
+  background-image: url(../img/quienesTexto.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height:300px;
 }
 
 /* ESTILOS SERVICIOS */
 
 #servicios {
-  width          : 100%;
-  height         : 100vh;
-  background     : url("../img/fotoservicios.jpg") top center;
+  width: 100%;
+  height: 100vh;
+  background: url("img/fotoservicios.jpg") top center;
   background-size: cover;
-  position       : relative;
+  position: relative;
 
   &:before {
-    content   : "";
+    content: "";
     background: rgba(32, 32, 48, 0.6);
-    filter    : opacity(20%);
-    position  : absolute;
-    bottom    : 0;
-    top       : 0;
-    left      : 0;
-    right     : 0;
+    filter: opacity(20%);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
   }
 
   .container {
-    position   : relative;
+    position: relative;
     padding-top: 74px;
-    text-align : center;
+    text-align: center;
   }
 
   h1 {
-    margin     : 0;
-    font-size  : 56px;
+    margin: 0;
+    font-size: 56px;
     font-weight: 700;
     line-height: 64px;
-    color      : #fff;
+    color: #fff;
   }
 }
 
 .tituloServicios {
   text-transform: uppercase;
-  margin        : 100px;
+  margin: 100px;
 }
 
 .textosServicios {
-  width      : 550px;
-  font-size  : 2rem;
+  width: 550px;
+  font-size: 2rem;
   font-weight: bolder;
-  color      : $color_azul;
+  color: #0B132B;
 }
 
 .flexServicios {
-  display        : flex;
-  flex-direction : row;
+  display: flex;
+  flex-direction: row;
   justify-content: space-around;
-  align-items    : center;
-  margin         : 80px;
+  align-items: center;
+  margin: 80px;
 }
 
 .fotoTextil {
@@ -473,70 +426,70 @@ body {
 /* ESTILOS PORTFOLIO */
 
 #portfolio {
-  width          : 100%;
-  height         : 100vh;
-  background     : url("../img/fotoPortfolio.jpg") top center;
+  width: 100%;
+  height: 100vh;
+  background: url("img/fotoPortfolio.jpg") top center;
   background-size: cover;
-  position       : relative;
+  position: relative;
 
   &:before {
-    content   : "";
+    content: "";
     background: rgba(32, 32, 48, 0.6);
-    filter    : opacity(20%);
-    position  : absolute;
-    bottom    : 0;
-    top       : 0;
-    left      : 0;
-    right     : 0;
+    filter: opacity(20%);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
   }
 
   .container {
-    position   : relative;
+    position: relative;
     padding-top: 74px;
-    text-align : center;
+    text-align: center;
   }
 
   h1 {
-    margin     : 0;
-    font-size  : 56px;
+    margin: 0;
+    font-size: 56px;
     font-weight: 700;
     line-height: 64px;
-    color      : #fff;
+    color: #fff;
   }
 }
 
 .parrafoPortfolio {
-  text-align   : center;
-  margin       : 30px 250px;
+  text-align: center;
+  margin: 30px 250px;
   margin-bottom: 50px;
-  width        : 800px;
-  padding      : 10px;
-  font-weight  : 600;
-  font-size    : 16px;
-  line-height  : 25px;
-  color        : $color_azul;
+  width: 800px;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 25px;
+  color: #0B132B;
 }
 
 .ulTrabajos {
-  text-align   : center;
+  text-align: center;
   margin-bottom: 80px;
-  margin-top   : 50px;
+  margin-top: 50px;
 }
 
 .listaTrabajos {
-  padding        : 10px;
+  padding: 10px;
   list-style-type: none;
-  display        : inline;
-  font-weight    : bold;
-  font-size      : 16px;
-  color          : $color_azul;
-  margin         : 10px;
+  display: inline;
+  font-weight: bold;
+  font-size: 16px;
+  color: #0B132B;
+  margin: 10px;
 }
 
 .tituloPortfolio {
-  margin    : 40px;
+  margin: 40px;
   text-align: center;
-  color     : $color_azul;
+  color: #0B132B;
 }
 
 .imagenesTrabajosRecientes {
@@ -545,13 +498,13 @@ body {
 }
 
 .gridsImagenesIndex {
-  display              : grid;
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows   : 320px 480px;
-  align-items          : start;
-  grid-template-areas  : "foto1 foto2 foto3 foto4""foto5 foto6 foto7 foto8";
-  justify-items        : center;
-  margin-top           : 10px;
+  grid-template-rows: 320px 480px;
+  align-items: start;
+  grid-template-areas: "foto1 foto2 foto3 foto4" "foto5 foto6 foto7 foto8";
+  justify-items: center;
+  margin-top: 10px;
 }
 
 .imagenesTrabajosRecientes:hover {
@@ -593,52 +546,52 @@ body {
 /* ESTILOS CONTACTO */
 
 #contacto {
-  width          : 100%;
-  height         : 100vh;
-  background     : url("../img/fotoIndex.jpg") top center;
+  width: 100%;
+  height: 100vh;
+  background: url("img/fotoIndex.jpg") top center;
   background-size: cover;
-  position       : relative;
+  position: relative;
 
   &:before {
-    content   : "";
+    content: "";
     background: rgba(32, 32, 48, 0.6);
-    filter    : opacity(20%);
-    position  : absolute;
-    bottom    : 0;
-    top       : 0;
-    left      : 0;
-    right     : 0;
+    filter: opacity(20%);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
   }
 
   .container {
-    position   : relative;
+    position: relative;
     padding-top: 74px;
-    text-align : center;
+    text-align: center;
   }
 
   h1 {
-    margin     : 0;
-    font-size  : 56px;
+    margin: 0;
+    font-size: 56px;
     font-weight: 700;
     line-height: 64px;
-    color      : #fff;
+    color: #fff;
   }
 }
 
 .navContacto {
-  background-color: $color_naranja;
+  background-color: #CC5500;
 }
 
 .tituloContacto {
-  font-size  : 2rem;
+  font-size: 2rem;
   font-weight: bold;
-  text-align : center;
-  margin     : 30px;
+  text-align: center;
+  margin: 30px;
 }
 
 form {
-  width         : 600px;
-  margin        : 5px 100px 5px 500px;
+  width: 600px;
+  margin: 5px 100px 5px 500px;
   padding-bottom: 400px;
 }
 
@@ -648,34 +601,34 @@ form {
 
 .espaciosForm {
   padding: 15px;
-  margin : 5px;
+  margin: 5px;
 }
 
 .botonForm {
-  padding    : 5px 7px 5px 7px;
-  margin     : 2px 5px 15px 5px;
+  padding: 5px 7px 5px 7px;
+  margin: 2px 5px 15px 5px;
   margin-left: 20px;
 }
 
 .textosForm {
   font-weight: bold;
-  font-size  : 16px;
-  color      : $color_azul;
+  font-size: 16px;
+  color: #0B132B;
 }
 
 /* ESTILOS FOOTER */
 
 footer {
-  background-color: $color_azul;
-  display         : flex;
-  flex-direction  : row;
-  justify-content : space-around;
+  background-color: #0B132B;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .textoFooter {
-  color  : white;
+  color: white;
   padding: 30px;
-  margin : 10px;
+  margin: 10px;
 }
 
 .redesFooter {
@@ -686,16 +639,17 @@ footer {
 
 @media screen and (min-width: 1020px) {
   .flexImagenesIndex {
-    display        : flex;
-    flex-direction : row;
-    flex-wrap      : nowrap;
-    height         : 500px;
-    margin         : 15px;
-    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 5px;
+    margin-bottom: 20px;
+    height: 150px;
+    justify-content: space-around;
   }
 
   .imagenesIndex {
-    height: 240px;
+    height: 40px;
     margin: 5px;
 
     &:hover {
@@ -716,11 +670,11 @@ footer {
   }
 
   .flexImagenesIndex {
-    display        : flex;
-    flex-direction : row;
-    flex-wrap      : wrap;
-    height         : 500px;
-    margin         : 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 500px;
+    margin: 15px;
     justify-content: space-between;
   }
 
@@ -740,50 +694,50 @@ footer {
   }
 
   .gridsQuienesSomos {
-    display       : flex;
+    display: flex;
     flex-direction: column;
-    justify-items : center;
-    align-items   : center;
+    justify-items: center;
+    align-items: center;
     padding-bottom: 30px;
   }
 
   .tituloQuienesSomos {
-    grid-area     : tituloQuienesSomos;
-    font-size     : 2rem;
-    color         : $color_azul;
+    grid-area: tituloQuienesSomos;
+    font-size: 2rem;
+    color: #0B132B;
     padding-bottom: 0px;
-    padding-top   : 24px;
+    padding-top: 24px;
   }
 
   .parrafoQuienesSomos {
-    grid-area  : parrafoQuienesSomos;
+    grid-area: parrafoQuienesSomos;
     font-weight: 450;
-    font-size  : 16px;
+    font-size: 16px;
     line-height: 25px;
-    width      : 500px;
-    color      : $color_azul;
-    margin-top : 30px;
-    height     : 600px;
+    width: 500px;
+    color: #0B132B;
+    margin-top: 30px;
+    height: 600px;
   }
 
   .tituloMaquinas {
-    text-align : center;
+    text-align: center;
     font-weight: bold;
-    font-size  : 17px;
-    margin     : 5px;
-    padding    : 15px;
+    font-size: 17px;
+    margin: 5px;
+    padding: 15px;
     padding-top: 5px;
   }
 
   .listaMaquinas {
     list-style-type: none;
-    line-height    : 40px;
-    text-align     : center;
+    line-height: 40px;
+    text-align: center;
   }
 
   .fotoRapiditas {
-    grid-area : fotoRapiditas;
-    height    : 400px;
+    grid-area: fotoRapiditas;
+    height: 400px;
     margin-top: 20px;
   }
 
@@ -795,26 +749,26 @@ footer {
 
   .tituloServicios {
     text-transform: uppercase;
-    margin        : 50px;
-    font-size     : 3rem;
+    margin: 50px;
+    font-size: 3rem;
   }
 
   .textosServicios {
-    width      : 550px;
-    font-size  : 2rem;
-    text-align : center;
+    width: 550px;
+    font-size: 2rem;
+    text-align: center;
     font-weight: bolder;
-    color      : $color_azul;
+    color: #0B132B;
   }
 
   .flexServicios {
-    display        : flex;
-    flex-direction : column;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items    : center;
-    margin         : 20px;
-    margin-bottom  : 20px;
-    padding        : 20px;
+    align-items: center;
+    margin: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
   }
 
   .ordenServicios {
@@ -836,31 +790,31 @@ footer {
   }
 
   .parrafoPortfolio {
-    text-align   : center;
-    margin       : 0px;
+    text-align: center;
+    margin: 0px;
     margin-bottom: 50px;
-    width        : 500px;
-    padding      : 10px;
-    font-weight  : 450;
-    font-size    : 16px;
-    line-height  : 25px;
-    color        : $color_azul;
+    width: 500px;
+    padding: 10px;
+    font-weight: 450;
+    font-size: 16px;
+    line-height: 25px;
+    color: #0B132B;
   }
 
   .ulTrabajos {
-    text-align   : center;
+    text-align: center;
     margin-bottom: 80px;
-    margin-top   : 50px;
+    margin-top: 50px;
   }
 
   .listaTrabajos {
-    padding        : 10px;
+    padding: 10px;
     list-style-type: none;
-    display        : inline;
-    font-weight    : bold;
-    font-size      : 16px;
-    color          : $color_azul;
-    margin         : 10px;
+    display: inline;
+    font-weight: bold;
+    font-size: 16px;
+    color: #0B132B;
+    margin: 10px;
   }
 
   .tituloPortfolio {
@@ -873,13 +827,13 @@ footer {
   }
 
   .gridsImagenesIndex {
-    display              : grid;
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows   : 320px 320px 470px;
-    align-items          : start;
-    grid-template-areas  : "foto1 foto2 foto3""foto4 foto5 foto6""foto7 foto8 .";
-    margin-bottom        : 40px;
-    margin-top           : 0px;
+    grid-template-rows: 320px 320px 470px;
+    align-items: start;
+    grid-template-areas: "foto1 foto2 foto3" "foto4 foto5 foto6" "foto7 foto8 .";
+    margin-bottom: 40px;
+    margin-top: 0px;
   }
 
   .imagenesTrabajosRecientes:hover {
@@ -925,9 +879,9 @@ footer {
   }
 
   form {
-    width         : 500px;
-    margin        : 5px 100px 5px 200px;
-    padding-top   : 50px;
+    width: 500px;
+    margin: 5px 100px 5px 200px;
+    padding-top: 50px;
     padding-bottom: 220px;
   }
 }
@@ -939,7 +893,7 @@ footer {
     height: auto;
 
     h1 {
-      font-size  : 28px;
+      font-size: 28px;
       line-height: 36px;
     }
   }
@@ -949,56 +903,56 @@ footer {
   }
 
   #servicios h1 {
-    font-size  : 28px;
+    font-size: 28px;
     line-height: 36px;
   }
 
   #servicio .container {
-    position   : relative;
+    position: relative;
     padding-top: 174px;
-    height     : 300px;
-    text-align : center;
+    height: 300px;
+    text-align: center;
   }
 
   #quienes {
     h1 {
-      font-size  : 28px;
+      font-size: 28px;
       line-height: 36px;
     }
 
     .container {
-      position   : relative;
+      position: relative;
       padding-top: 100px;
-      height     : 300px;
-      text-align : center;
+      height: 300px;
+      text-align: center;
     }
   }
 
   #portfolio {
     h1 {
-      font-size  : 28px;
+      font-size: 28px;
       line-height: 36px;
     }
 
     .container {
-      position   : relative;
+      position: relative;
       padding-top: 174px;
-      height     : 300px;
-      text-align : center;
+      height: 300px;
+      text-align: center;
     }
   }
 
   #contacto {
     h1 {
-      font-size  : 28px;
+      font-size: 28px;
       line-height: 36px;
     }
 
     .container {
-      position   : relative;
+      position: relative;
       padding-top: 250px;
-      height     : 300px;
-      text-align : center;
+      height: 300px;
+      text-align: center;
     }
   }
 }
@@ -1011,34 +965,33 @@ footer {
   }
 
   #iconos {
-    display          : initial;
-    transition       : ease-in-out 0.3s;
-    border           : none;
-    background-image : url(img/vinilo.png);
+    display: initial;
+    transition: ease-in-out 0.3s;
+    border: none;
+    background-image: url(img/vinilo.png);
     background-repeat: no-repeat;
   }
 
   #hero {
     h1 {
-      font-size    : 40px;
-      line-height  : 45px;
-      padding-left : 15px;
+      font-size: 40px;
+      line-height: 45px;
+      padding-left: 15px;
       padding-right: 15px;
-      margin-top   : 30px;
+      margin-top: 30px;
     }
 
-    h2,
-    .icon-box h3 {
+    h2, .icon-box h3 {
       display: none;
     }
   }
 
   .flexImagenesIndex {
-    display        : flex;
-    flex-direction : row;
-    flex-wrap      : wrap;
-    height         : 179vh;
-    margin         : 60px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 179vh;
+    margin: 60px;
     justify-content: center;
   }
 
@@ -1055,64 +1008,63 @@ footer {
 
   #quienes {
     h1 {
-      font-size    : 30px;
-      line-height  : 36px;
-      padding-left : 15px;
+      font-size: 30px;
+      line-height: 36px;
+      padding-left: 15px;
       padding-right: 15px;
     }
 
-    h2,
-    .icon-box h3 {
+    h2, .icon-box h3 {
       display: none;
     }
   }
 
   .gridsQuienesSomos {
-    display       : flex;
+    display: flex;
     flex-direction: column;
-    justify-items : center;
-    align-items   : center;
+    justify-items: center;
+    align-items: center;
     padding-bottom: 30px;
   }
 
   .tituloQuienesSomos {
-    grid-area     : tituloQuienesSomos;
-    font-size     : 22px;
-    color         : #0B132B;
+    grid-area: tituloQuienesSomos;
+    font-size: 22px;
+    color: #0B132B;
     padding-bottom: 0px;
-    padding-top   : 24px;
+    padding-top: 24px;
   }
 
   .parrafoQuienesSomos {
-    grid-area  : parrafoQuienesSomos;
+    grid-area: parrafoQuienesSomos;
     font-weight: 450;
-    font-size  : 16px;
+    font-size: 16px;
     line-height: 25px;
-    text-align : center;
-    width      : 313px;
-    color      : $color_azul;
-    margin-top : 30px;
-    height     : 600px;
+    text-align: center;
+    width: 313px;
+    color: #0B132B;
+    margin-top: 30px;
+    height: 600px;
   }
 
   .tituloMaquinas {
-    text-align : center;
+    text-align: center;
     font-weight: bold;
-    font-size  : 17px;
-    margin     : 5px;
-    padding    : 15px;
+    font-size: 17px;
+    margin: 5px;
+    padding: 15px;
     padding-top: 5px;
   }
 
   .listaMaquinas {
     list-style-type: none;
-    line-height    : 40px;
-    text-align     : center;
+    line-height: 40px;
+    text-align: center;
   }
 
   .fotoRapiditas {
-    grid-area : fotoRapiditas;
-    height    : 300px;
+    grid-area: fotoRapiditas;
+    height: 300px;
     margin-top: 20px;
   }
 
@@ -1120,40 +1072,39 @@ footer {
 
   #servicios {
     h1 {
-      font-size    : 30px;
-      line-height  : 36px;
-      padding-left : 15px;
+      font-size: 30px;
+      line-height: 36px;
+      padding-left: 15px;
       padding-right: 15px;
     }
 
-    h2,
-    .icon-box h3 {
+    h2, .icon-box h3 {
       display: none;
     }
   }
 
   .tituloServicios {
     text-transform: uppercase;
-    margin        : 20px 35px;
-    font-size     : 22px;
+    margin: 20px 35px;
+    font-size: 22px;
   }
 
   .textosServicios {
-    width      : 300px;
-    font-size  : 22px;
-    text-align : center;
+    width: 300px;
+    font-size: 22px;
+    text-align: center;
     font-weight: bolder;
-    color      : $color_azul;
+    color: #0B132B;
   }
 
   .flexServicios {
-    display        : flex;
-    flex-direction : column;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items    : center;
-    margin         : 20px;
-    margin-bottom  : 20px;
-    padding        : 20px;
+    align-items: center;
+    margin: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
   }
 
   .ordenServicios {
@@ -1175,47 +1126,46 @@ footer {
   /* ESTILOS PORTFOLIO */
 
   #portfolio h1 {
-    font-size    : 30px;
-    line-height  : 36px;
-    padding-left : 15px;
+    font-size: 30px;
+    line-height: 36px;
+    padding-left: 15px;
     padding-right: 15px;
   }
 
-  #porfolio h2,
-  #portfolio .icon-box h3 {
+  #porfolio h2, #portfolio .icon-box h3 {
     display: none;
   }
 
   .parrafoPortfolio {
-    text-align   : center;
-    margin       : 0px;
+    text-align: center;
+    margin: 0px;
     margin-bottom: 50px;
-    width        : 300px;
-    padding      : 10px;
-    font-weight  : 450;
-    font-size    : 16px;
-    line-height  : 25px;
-    color        : $color_azul;
+    width: 300px;
+    padding: 10px;
+    font-weight: 450;
+    font-size: 16px;
+    line-height: 25px;
+    color: #0B132B;
   }
 
   .ulTrabajos {
-    text-align   : center;
+    text-align: center;
     margin-bottom: 22px;
-    margin-top   : 20px;
+    margin-top: 20px;
   }
 
   .listaTrabajos {
-    padding        : 10px;
+    padding: 10px;
     list-style-type: none;
-    display        : inline-block;
-    font-weight    : bold;
-    font-size      : 16px;
-    color          : $color_azul;
-    margin         : 10px;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 16px;
+    color: #0B132B;
+    margin: 10px;
   }
 
   .tituloPortfolio {
-    margin-top   : 40px;
+    margin-top: 40px;
     margin-bottom: 10px;
   }
 
@@ -1225,13 +1175,13 @@ footer {
   }
 
   .gridsImagenesIndex {
-    display              : grid;
+    display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows   : 320px 320px 320px 320px 320px 320px 320px 455px;
-    grid-template-areas  : "foto1""foto2""foto3""foto4""foto5""foto6""foto7""foto8"".";
-    margin-bottom        : 40px;
-    margin-top           : 0px;
-    justify-items        : center;
+    grid-template-rows: 320px 320px 320px 320px 320px 320px 320px 455px;
+    grid-template-areas: "foto1" "foto2" "foto3" "foto4" "foto5" "foto6" "foto7" "foto8" ".";
+    margin-bottom: 40px;
+    margin-top: 0px;
+    justify-items: center;
   }
 
   .imagenesTrabajosRecientes:hover {
@@ -1274,9 +1224,9 @@ footer {
 
   #contacto {
     h1 {
-      font-size    : 30px;
-      line-height  : 36px;
-      padding-left : 15px;
+      font-size: 30px;
+      line-height: 36px;
+      padding-left: 15px;
       padding-right: 15px;
     }
 
@@ -1286,9 +1236,9 @@ footer {
   }
 
   form {
-    width         : 300px;
-    margin        : 5px 30px;
-    padding-top   : 50px;
+    width: 300px;
+    margin: 5px 30px;
+    padding-top: 50px;
     padding-bottom: 100px;
   }
 
