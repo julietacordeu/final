@@ -457,7 +457,14 @@ SECCIÓN PRINCIPAL */
 // PORTFOLIO
 
 
+.portfolioMain {
+  --bs-gutter-x: 0rem;
+  --bs-gutter-y: 0;
+}
+
 #portfolio {
+
+
   .container-fluid, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
     max-width: 1920px;
   }
@@ -479,13 +486,14 @@ SECCIÓN PRINCIPAL */
     text-align: center;
     opacity: 0;
     color: #fff;
-    background: rgba(244, 98, 58, 0.9);
+    background: $color_aguamarina;
     transition: opacity 0.25s ease;
     text-align: center;
   }
 
+
+
   .container-fluid .portfolio-box .portfolio-box-caption .project-category, .container-sm .portfolio-box .portfolio-box-caption .project-category, .container-md .portfolio-box .portfolio-box-caption .project-category, .container-lg .portfolio-box .portfolio-box-caption .project-category, .container-xl .portfolio-box .portfolio-box-caption .project-category, .container-xxl .portfolio-box .portfolio-box-caption .project-category {
-    font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-size: 0.85rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -496,7 +504,7 @@ SECCIÓN PRINCIPAL */
   }
 
   .container-fluid .portfolio-box:hover .portfolio-box-caption, .container-sm .portfolio-box:hover .portfolio-box-caption, .container-md .portfolio-box:hover .portfolio-box-caption, .container-lg .portfolio-box:hover .portfolio-box-caption, .container-xl .portfolio-box:hover .portfolio-box-caption, .container-xxl .portfolio-box:hover .portfolio-box-caption {
-    opacity: 1;
+    opacity: 95%;
   }
 }
 
@@ -532,48 +540,33 @@ SECCIÓN PRINCIPAL */
 /* ESTILOS PORTFOLIO */
 
 #portfolio {
-  width: 100%;
-  height: 100vh;
-  background: url("img/fotoPortfolio.jpg") top center;
-  background-size: cover;
-  position: relative;
-
-  &:before {
-    content: "";
-    background: rgba(32, 32, 48, 0.6);
-    filter: opacity(20%);
-    position: absolute;
-    bottom: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-  }
 
   .container {
     position: relative;
-    padding-top: 74px;
+    padding-top: 100px;
     text-align: center;
   }
 
   h1 {
     margin: 0;
-    font-size: 56px;
+    font-size: 48px;
     font-weight: 700;
     line-height: 64px;
-    color: #fff;
+    color: $color_naranja;
   }
 }
 
 .parrafoPortfolio {
   text-align: center;
-  margin: 30px 250px;
+  margin-top: 50px;
   margin-bottom: 50px;
-  width: 800px;
-  padding: 10px;
+  width: 100%;
+  padding-left: 210px;
+  padding-right: 210px;
   font-weight: 600;
-  font-size: 16px;
-  line-height: 25px;
-  color: #0B132B;
+  font-size: 19px;
+  line-height: 30px;
+  color: $color_azul;
 }
 
 .ulTrabajos {
